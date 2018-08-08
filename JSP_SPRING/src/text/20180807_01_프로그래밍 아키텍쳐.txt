@@ -1,0 +1,27 @@
+ + 프로그래밍 아키텍쳐
+  - 프로그램 작성 구조(구성)
+
+  - MODEL 1
+  - MODEL 2
+
+
+ + 비지니스 로직, Business Logic
+  - 클라이언트(사용자)에게 안 보이는 부분
+
+  - 데이터를 처리하는(가공하는) 응용프로그램의 일부 영역
+  - DB 처리
+  - 데이터 가공(로그인 데이터 인증)
+
+  - Server Side Script(Language) : Java(Servlet)
+
+  - Servlet 으로 구현됨
+
+
+ + 프레젠테이션 로직, Presentation Logic
+  - 클라이언트에게 보이는 부분
+
+  - 화면을 구성하기 위한 응용프로그램의 일부 영역
+
+  - Client Side Script(Language) : HTML, CSS, JS
+
+  - JSP로 구현됨

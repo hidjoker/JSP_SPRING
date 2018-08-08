@@ -1,0 +1,40 @@
+	 + 회원가입 처리하기 +
+
+	1. 클라이언트가 Form데이터를 전송 ( /member/join , post )
+
+	2. 서블릿이 요청 받음 ( controller.MemberController )
+
+	3. 서블릿이 요청파라미터를 꺼내서 MODEL객체에 저장
+	  ( dto.Member )
+
+	4. MODEL객체를 DAO에 join메소드로 전송
+
+	5. DAO는 DBConn 얻어서 Member 테이블에 MODEL객체 INSERT
+	  ( I. INSERT 전에 SELECT로 PK가 중복되는지 검사 )
+	  ( II. 중복되지않으면 INSERT )
+	  ( II-I. 중복된다면 RETURN )
+	  ( III. INSERT 후에 SELECT 정상적으로 INSERT됐는지 검사 )
+
+	6. 서블릿이 DAO의 수행결과 값을 VIEW 전달
+	  ( /view/member/result.jsp )
+
+	7. VIEW는 결과에 따라서 화면에 표현
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

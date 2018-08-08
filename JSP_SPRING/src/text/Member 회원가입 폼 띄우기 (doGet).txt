@@ -1,0 +1,8 @@
+
+	 + 회원가입 폼 띄우기 +
+
+	1. 클라이언트가 요청 ( /member/join , get )
+
+	2. 서블릿이 요청 받음 ( controller.MemberController )
+
+	3. VIEW 응답하기 ( /view/member/joinForm.jsp )

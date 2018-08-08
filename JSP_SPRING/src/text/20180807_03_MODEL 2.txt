@@ -1,0 +1,13 @@
+ + MODEL 2
+
+  - 비지니스 로직과 프레젠테이션 로직을 분리한 형태
+   ( 별도의 파일로 각 로직을 작성 )
+
+
+  - MVC 패턴
+
+	Model - (통신) 데이터, JavaBean Class
+
+	View - 프레젠테이션 로직, JSP
+
+	Controller - 비지니스 로직, Servlet

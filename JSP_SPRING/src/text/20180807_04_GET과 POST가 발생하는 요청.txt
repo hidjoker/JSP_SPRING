@@ -1,0 +1,13 @@
+
+ + GET method 로 요청이 오는 상황
+
+  1. URL 요청
+	브라우저에서 URL 입력창에 주소를 입력하고 이동할 때
+
+  2. method가 get으로 설정된 <form> 태그의 submit이 이루어질 때
+
+  3. 쿼리스트링이 추가된 URL 요청이 발생할 때
+
+
+ + POST method 로 요청이 오는 상황
+  - method가 post으로 설정된 <form> 태그의 submit이 이루어질 때
