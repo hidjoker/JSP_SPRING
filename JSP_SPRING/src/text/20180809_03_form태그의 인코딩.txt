@@ -1,0 +1,24 @@
+
+ + <form> 태그의 인코딩 설정
+
+  ** enctype 속성을 설정하려면 post method를 사용한다
+
+
+  - enctype="application/x-www-form-urlencoded"
+	<form> 태그의 기본 인코딩 방식
+
+	submit 할 데이터를 쿼리스트링 형태로 변환해준다
+
+	ex) ?age=123&name=Alice
+
+	 만약 이 인코딩방식으로 file을 전송하면
+	파일의 이름만 전송된다 ( String 데이터만 전송하기 때문 )
+
+
+  - enctype="multipart/form-data"
+	파일의 내용을 <form>태그로 submit할 수 있도록 하는 방식
+
+
+  - enctype="text/plain"
+	별도의 인코딩을 하지 않음
+	' '(스페이스)만 '+'로 변환

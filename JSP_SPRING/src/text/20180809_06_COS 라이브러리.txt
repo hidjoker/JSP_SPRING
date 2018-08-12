@@ -1,0 +1,11 @@
+
+ + COS 라이브러리 다운
+
+	1. http://www.servlets.com/ 접속
+
+	2. 왼쪽 메뉴에서 com.oreilly.servlet 선택
+
+	3. Download 섹션에서
+		cos-26Dec2008.zip 다운로드
+
+	4. 압축 파일 내 lib폴더의 cos.jar 사용

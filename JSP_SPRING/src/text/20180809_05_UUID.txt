@@ -1,0 +1,26 @@
+ + UUID, Universally Unique IDentifier
+  - 범용적 고유 식별자
+
+  - java.util.UUID
+
+  - 32개의 16진수와 4개의 '-'로 이루어진 식별값
+
+  - 형식 : 8개-4개-4개-4개-12개 ( 각 자릿수는 16진수 )
+
+  - 예시)
+	bc4b96e6-9f75-409c-a873-703f6bf70315
+
+
+  - 사용방법
+	1. UUID.randomUUID() 로 랜덤 식별자를 얻는다
+	( UUID.randomUUID.toString()으로 문자열로 얻는 것도 가능 )
+
+	2. 얻어진 식별자문자열을 split("-") 으로 잘라내 사용한다
+
+	ex)
+	String uniqueID = UUID.randomUUID().toString();
+
+	String uId_1 = uniqueID.split("-")[0];	//8자리
+
+	String uId_2 = uniqueId.split("-")[0]
+		+ uniqueId.split("-")[1];	//12자리

@@ -1,0 +1,42 @@
+ + COS 라이브러리를 이용한 파일 업로드
+
+  - com.oreilly.servlet.servlet.MultipartRequest 객체 이용
+
+  - 객체의 생성자를 통해 업로드 제한 설정을 한다
+
+
+
+ + MultipartRequest 생성자
+
+  - public MultipartRequest (
+	HttpServletRequest request, //요청 객체
+	String saveDirectory, //파일 저장 위치
+	int maxPostSize, //업로드 제한 사이즈
+	String encoding, //인코딩
+	FileRenamePolicy policy //중복 파일이름 처리정책
+    ) throws IOException
+
+
+
+ + MultipartRequest 메소드
+  - String getParameter(arg0) : 파라미터 값
+
+
+  - String[] getParameterValues(arg0) : 파라미터 값을 배열로
+
+  - Enumeration getParameterNames() : 파라미터 name을 열거체로
+
+
+  - File getFile(arg0) : 서버에 업로드 된 파일 정보를 객체로
+
+  - Enumeration getFileNames() : 여러 파일을 업로드 할 경우 파일 이름을 열거체로 반환
+
+  - String getFilesystemName(arg0) : 실제 업로드된 파일 이름
+
+  - String getOriginalFileName(arg0) : 원본 파일 이름
+
+
+  - String getContentType(arg0) : 파일의 컨텐트 타입 확인
+
+
+  ** arg0은 form태그에서 전달한 String name
