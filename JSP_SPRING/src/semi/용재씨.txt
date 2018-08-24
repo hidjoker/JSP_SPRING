@@ -1,0 +1,48 @@
+src
+
+	chat :
+		- Index.java : 
+			doGet()
+				 String ip : 접속자 IP 
+				
+		- Proc.java
+			doGet()
+				JsonObject obj 	: AJAX 통신용 JSONObject
+				JsonArray chatArr	: 전송할 채팅 배열 JSON데이터
+				String time 	: 이전 AJAX통신 완료 시간
+				List<String> result 	: 채팅내용 Select 결과
+				
+				out.println으로 Json객체 전송
+
+		- Write.java
+			doPost()
+				String name	: 작성자 이름
+				String msg	: 전송 메세지
+		
+	dao : 
+		- ChatDao.java
+
+			void write(Chat inserChat) : 채팅방 메세지 쓰기
+			List<String> proc(String lastReq) : 채팅방 메세지 불러오기		
+
+
+	dbutil :
+		- DBConn.java : Connection객체 반환		
+
+
+	dto :
+		- Chat.java
+			String name 	: 작성자 이름
+			String msg   	: 전송 메세지
+
+
+	WebContent :
+		- chat.css : 채팅방 CSS
+			
+		- chat.js	: AJAX 통신 JavaScript
+			chatManager()	: AJAX HttpRequest 설정
+				- proc 	: AJAX 데이터 받기 요청
+				- show 	: 전달받은 JSON데이터 출력
+				- write	: AJAX 데이터 보내기 요청
+					
+		- index.html

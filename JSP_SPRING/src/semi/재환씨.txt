@@ -1,0 +1,102 @@
+src
+
+	Controller :
+		- BoardController.java : 
+			doGet()
+				List<Board> boardList : 게시글 조회 결과
+				int totalCount : 총 게시글 수
+				String param : 현재 페이지
+				...
+				
+		- NoticeController.java
+			doGet()
+				List<Board> boardList : 게시글 조회 결과
+				int totalCount : 총 게시글 수
+				String param : 현재 페이지
+				...
+		- ShareController.java
+
+				List<Board> boardList : 게시글 조회 결과
+				int totalCount : 총 게시글 수
+				String param : 현재 페이지
+				...
+		
+	DAO : 
+			// board 테이블 전체 조회
+			public List selectAll();
+	
+			// 총 게시글 수 조회
+			public int selectCntAll();
+	
+			// 페이징 리스트 조회
+			public List selectPagingList(Paging paging);
+	
+			// 게시글 삽입
+			public void insert(Board board);
+		
+			// 게시글 조회
+			public Board selectBoardByBoardno(Board board);
+	
+			//  조회수 증가
+			public void updateHit(Board board);	
+	
+			// 삭제
+			delete( );
+			
+			// 검색
+			search( );
+		
+			// 업로드
+			upload( );
+
+			... 
+
+
+	DButil :
+		- DBConn.java : Connection객체 반환		
+
+
+	DTO :
+		- Board.java
+			int boardno;
+			String title;
+			String writerid;
+			String writer;
+			String content;
+			int hit;
+			int recommend;
+			Date writterndate;
+			String coment; 
+
+		- Notice.java
+
+			int boardno;
+			String title;
+			String writerid;
+			String writer;
+			String content;
+			int hit;
+			int recommend;
+			Date writterndate;
+			String coment; 
+
+		- Share.java
+
+			int boardno;
+			String title;
+			String writerid;
+			String writer;
+			String content;
+			int hit;
+			int recommend;
+			Date writterndate;
+			String coment; 
+			String Link;
+			String File;
+
+
+	WebContent :
+		- list.jsp
+		- view.jsp
+		- write.jsp
+		...

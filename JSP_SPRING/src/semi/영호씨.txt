@@ -1,0 +1,41 @@
+1.메인페이지 -
+
+컨트롤러
+mainController  / doGet()
+
+
+DAO
+
+mainDao  / userInfo(userDto dto) , 그 외 메소드는 게시판 DAO 이용
+mainDaoImpl  userInfo(userDto dto)
+
+DTO 
+: UserDTO(로그인과 페이지와 공유)
+
+Service :
+mainService - 인터페이스  /  mainDao userInfo(UserDTO dto);
+mainServiceImpl - 클래스  / mainDao userInfo(UserDTO dto);
+그 외 메소드는 게시판 DAO 이용
+
+View : JSP
+mainpage.jsp
+
+
+2. 관리자 페이지
+
+컨트롤러
+adminMainController  / doGet()
+
+
+DAO 
+Dao  /  createClass(); userInforamtion(String):UserDTO; userInsert(UserDTO):int; userUpdate(UserDTO):int; userDelete(UserDTO):int;
+DaoImpl  / createClass(); userInforamtion(String):UserDTO; userInsert(UserDTO):int; userUpdate(UserDTO):int; userDelete(UserDTO):int;
+
+DTO
+: 로그인과 페이지와 공유
+
+Service 
+mainService - serviceCreateClass();  serviceUserInforamtion(String):UserDTO;  serviceUserInsert(UserDTO):int;  serviceUserUpdate(UserDTO):int; serviceUserDelete(UserDTO):int;
+mainServiceImpl - serviceCreateClass();  serviceUserInforamtion(String):UserDTO;  serviceUserInsert(UserDTO):int;  serviceUserUpdate(UserDTO):int; serviceUserDelete(UserDTO):int;
+View : JSP
+adminpage.jsp
