@@ -1,0 +1,58 @@
+ + $.ajax(url [, settings]);
+ + $.ajax([ settings ]);
+
+  - settings
+
+	type : "GET"(기본값) | "POST"
+	  jQuery 1.9.0 이전 버전을 지원하는 설정
+	  method 항목과 같이 볼 것
+
+	url : String
+	  통신 URL
+
+	data : PlainObject, String, Array
+	  요청 파라미터
+
+	success : function(Anything data, String textStatus, jqXHR jqXHR);
+	  요청 성공 시 callback
+
+	error : function( jqXHR jqXHR, String textStatus, String errorThrown);
+	  요청 실패 시 callback
+
+	async : true(기본값) | false
+	  비동기 설정
+
+	beforeSend : function(jqXHR jqXHR, Object settings)
+	  요청 전 처리할 기능
+
+	complete : function(jqXHR jqXHR, String textStatus)
+	  요청 완료 후 처리할 기능(성패와 무관)
+
+	contentType : Boolean | String(MIME type)
+	  기본값 - 'application/x-www-form-urlencoded;charset=UTF-8'
+
+	  요청 파라미터의 ContentType
+
+	  기본값으로 많이 사용함
+
+	dataType : "xml" | "json" | "script" | "html" | "text"
+	  응답 데이터 타입
+
+	  지정된 형식에 맞게 응답 데이터를 파싱함
+	  
+	method : "GET"(기본값) | "POST" | "PUT" | ...
+	  Restful 요청 메소드 사용
+
+	  1.9.0부터 추가됨
+
+	statusCode : PlainObject
+	  상태 코드에 따른 처리 코드
+
+	  ex)
+
+	  statusCode: {
+	    404: function() {
+	    },
+	    403: function() {
+	    }
+	  }

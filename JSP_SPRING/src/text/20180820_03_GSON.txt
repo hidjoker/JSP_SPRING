@@ -1,0 +1,22 @@
+
+ + GSON
+  - 구글에서 제공하는 자바객체 <-> JSON 변환 라이브러리
+
+
+  - marshalling( 자바 -> JSON )
+
+	toJson() 메소드
+
+
+	기본 타입은 JSON형식에 맞게 별 문제없이 변환됨
+
+	객체타입을 JSON Text로 변환할 때 특징이 있다
+	1. 접근제한자를 따지지 않는다
+	2. null값은 가지는 필드는 제외된다
+	3. transient 키워드가 적용된 필드는 제외된다
+
+
+
+  - unmarshalling( JSON -> 자바 )
+
+	fromJson() 메소드

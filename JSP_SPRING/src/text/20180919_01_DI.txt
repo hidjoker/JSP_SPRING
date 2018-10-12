@@ -1,0 +1,17 @@
+ + DI, Dependency Injection, 의존성 주입
+  - 의존성을 클래스가 주체적으로 발생시키기 않고
+   외부의 도움을 받아 발생하는 것
+
+  ** 의존성, Dependency
+	특정 객체가 작동하기위해서 필요한 외부 객체와의 연결
+
+	public class EmpController {
+	  EmpService empService = new EmpServiceImpl();
+	  EmpDao empDao = new EmpDaoImpl();
+
+	}
+
+ + IoC, Inversion of Control, 제어의 역전
+  - 프로그램의 흐름 제어 권한이 프레임워크에게 넘겨진 것
+
+  - 개발 흐름 제어 권한이 역전되었다는 뜻

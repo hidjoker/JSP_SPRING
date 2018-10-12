@@ -1,0 +1,36 @@
+ + Java Bean ( = DTO )
+  - 자바 클래스
+
+  - 프로그램에서 사용할 정보를 모아놓은 데이터 저장소
+
+  - 정보은닉을 적용한다 (접근제한자)
+	-> 멤버필드는 private
+	-> 멤버필드에 대한 getter/setter 작성
+
+
+
+ + 자바빈 설계 규약(원칙)
+  - 로직 X
+  - getter/setter 이외의 메소드는 추가하지 않는다
+
+  - 디폴트 패키지를 사용하지 않는다
+
+  - public 클래스로 지정한다
+	멤버필드는 모두 private
+	getter/setter는 public
+
+  - 생성자는 파라미터를 가지지 않는다
+	디폴트 생성자만 허용한다
+
+  - 멤버변수는 Property(프로퍼티)라고 부른다
+
+  - getter의 반환타입이 boolean이면 get 대신 is를 쓸 수 있다
+
+
+
+
+ + POJO, Plain Old Java Object
+
+  - 개발자가 마음대로 정의할 수 있는 객체
+
+  - 가볍고, 유연하고, 간단한 자바 객체

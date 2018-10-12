@@ -1,0 +1,28 @@
+ + Spring의 요청 처리 방식(순서)
+
+  0. 브라우저(클라이언트)의 요청 발생
+
+  1. DispatcherServlet이 모든 요청을 받음
+   ( url-pattern mapping : "/" )
+   ( 이외의 개별적인 Servlet은 생성하지 않는다 )
+
+  2. URL Mapping이 적절이 적용된 Controller 클래스에게
+   Request처리를 일임한다
+
+	Servlet을 대신해서 Controller가 Request를 처리
+
+  3. Controller는 요청에 대한 처리 후
+    DispatcherServlet에 결과 반환
+
+	ModelAndView 객체를 이용한다
+
+  4. DispatcherServlet이 ViewResolver를 이용하여
+    viewName에 맞춰 VIEW를 지정 (.jsp)
+
+	prefix + viewName + suffix
+
+  5. MODEL을 request객체에 담은 후 VIEW를 이용한 응답 생성
+
+	HTML로 결과물을 생산한다
+
+  6. 클라이언트에게 결과 내용 응답(Response)

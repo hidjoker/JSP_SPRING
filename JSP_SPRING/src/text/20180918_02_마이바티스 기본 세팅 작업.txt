@@ -1,0 +1,99 @@
+
+ + 마이바티스 기본 세팅 작업
+
+  - 라이브러리 설치
+	mybatis-x.x.x.jar 설치
+	ojdbcX.jar 설치
+
+
+  - 마이바티스에서 사용되는 xml(설정파일)
+	config xml : mybatis 접속, 환경 설정
+	mapper xml : SQL 설정
+
+	** 두 xml파일은 DTD가 다르므로 잘 확인해야한다
+	** 복붙해서 쓸 때 조심하세요
+
+
+  - Mybatis Connection Factory파일 생성
+	SqlSessionFactory Calss 를 싱글톤으로 생성
+
+	** SqlSessionFactory : SqlSession 객체를 생성하는 클래스
+	** SqlSession : MyBatis를 이용하는 객체( SQL 처리 객체 )
+
+
+  - DAO 객체(interface)
+	MyBatis를 이용하기 위한 인터페이스(추상 메소드 정의)
+	(캡슐화된 JDBC를 사용하는 연결지점)
+
+  - DTO 객체
+	테이블 정보를 전달하거나 받기 위한 객체
+
+
+  - 실행 파일( 웹에서는 Controller )
+	SqlSessionFactory Class 를 통해 SqlSession 객체 생성
+	( SqlSession객체에 DAO를 통해 DB접속을 매핑한다 )
+
+	SqlSession 객체를 이용하여 DB작업 요청
+
+	응답받은 결과를 이용한 비지니스 로직 처리
+
+
+
+ + mapper xml 파일의 태그
+
+  - <mapper> 태그
+	mapper xml 의 최상위 태그
+
+	namespace 속성을 통해 DAO객체와 연결시킨다(매핑)
+
+  - <select> 태그
+  - <insert> 태그
+  - <update> 태그
+  - <delete> 태그
+	수행할 SQL구문에 맞춰 작성하는 태그
+
+	태그 내부에 SQL구문을 작성할 수 있다
+
+	id속성을 통해서 DAO객체의 추상메소드와 매핑된다
+
+	 parameterType / parameterMap 을 이용해서 DAO객체의
+	매개변수와 매핑된다
+
+	 resultType / resultMap 을 이용해서 DAO객체의
+	리턴타입과 매핑된다
+
+
+	** 태그 종류와 쿼리의 종류를 반드시 맞출 필요는 없다
+	 (<select> 태그에 insert, update, delete코드 적어도 동작)
+
+
+  - <sql> 태그
+	DAO객체와 매핑되지 않는 쿼리
+
+	 <select>, <insert>, <update>, <delete> 태그에서 불러와서
+	사용할 수 있다
+
+
+	ex)
+	<sql id="selectAll">
+	  SELECT * FROM emp
+	</sql>
+
+	<select id="selectEmp">
+	  <include refid="selectAll" />
+	</select>
+
+	<select id="selectCntEmp">
+	  SELECT COUNT(*) FROM (
+	    <include refid="selectAll" />
+	  ) CNT
+	</select>
+
+
+  - <resultMap> 태그
+	 resultMap 속성에 들어갈 새로운 타입(주로 HashMap)을
+	만들어내는 태그
+
+  - <parameterMap> 태그
+	 parameterMap 속성에 들어갈 새로운 타입(주로 HashMap)을
+	만들어내는 태그

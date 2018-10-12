@@ -1,0 +1,21 @@
+ + BoardController.java
+ + BoardInterceptor.java
+ + 두 파일 만들어서 해결하세요
+
+ + /interceptor/main 페이지에 "목록" 버튼 추가
+	<button>목록</button>
+
+ + 목록버튼을 클릭하면 /board/list로 이동
+  - 비로그인에도 접근 허용
+
+
+ + /board/list 에는 "글쓰기" 버튼 추가
+	<button>글쓰기</button>
+
+ + 글쓰기 버튼을 클릭하면 /board/write로 이동
+  - 로그인된 상태만 접근 허용
+  - 비로그인상태에서 글쓰기 시도 시 /board/noLogin로 이동
+
+
+ + /board/noLogin 에는 비로그인 안내문구와 "메인으로" 버튼 추가
+ 	<button>메인으로</button>

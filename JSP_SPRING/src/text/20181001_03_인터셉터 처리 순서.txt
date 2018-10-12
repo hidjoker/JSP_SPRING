@@ -1,0 +1,24 @@
+
+ + 인터셉터 클래스의 처리 순서
+
+  1. 브라우저 요청
+
+  2. 서버가 요청을 받아들임
+
+  3. 서블릿 필터 적용
+
+  4. DispatcherServlet이 요청 처리
+
+  ** 5. 인터셉터 적용 ( preHandle() )
+	(인터셉터가 요청을 먼저 받아 처리)
+
+  6. 적절하게 매핑된 Controller가 요청을 넘겨 받음
+
+  7. Controller의 요청 처리 (Service, Dao 기능 수행)
+
+  8. 응답객체를 DispatcherServlet에 전달(MODEL, viewName 전달)
+
+  ** 9. 인터셉터 적용 ( postHandle() )
+	(인터셉터가 응답에 추가 작업을 처리할 수 있음)
+
+  10. VIEW로 지정된 JSP를 HTML문서로 바꿔 서버가 클라이언트에 전달

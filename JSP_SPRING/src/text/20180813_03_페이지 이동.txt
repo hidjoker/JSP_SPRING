@@ -1,0 +1,30 @@
+ + 페이지 이동
+  - 화면 전환
+
+
+  - 리다이렉트(redirect)
+	URL을 변경하면서 페이지 이동
+	새로운 페이지가 열리면서 이동한다
+	새로운 request 발생
+
+	request, response 유지하지 않음
+
+
+	** Servlet에서 리다이렉트 발생시키기
+
+		response.sendRedirect("페이지URL");
+
+
+
+  - 포워드(foward)
+	URL을 유지하면서 문서 내용만 바꿔치기( 이동 )
+
+	request 객체가 유지됨
+
+
+	** Servlet에서 포워드하기
+
+		RequestDispatcher 클래스를 이용
+
+		request.getRequestDispatcher("페이지URL")
+		  .forward(request, response);

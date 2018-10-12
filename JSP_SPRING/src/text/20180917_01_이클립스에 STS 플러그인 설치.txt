@@ -1,0 +1,19 @@
+ + Spring STS Plugin설치
+
+  - Help 메뉴
+	Eclipse Marketplace
+
+  - STS 검색
+
+  - Install
+
+  - Confirm
+
+  - 라이센스 agreements선택
+
+  - Finish
+
+
+  ** 이거까지 하고 가만히 기다려요
+   Progress 탭 진행되는 거 보면서 완료되는 거 기다려요
+   딴거하면 에러날 때 있어요

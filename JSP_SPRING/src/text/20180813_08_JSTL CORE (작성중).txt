@@ -1,0 +1,32 @@
+ + JSTL CORE 태그
+
+  - out		JSP Writer를 이용한 출력
+
+   <c:out value="출력값"
+	default="value가 null일 때 출력"
+	escapeXml="true | false" />
+
+	> escapeXml
+		true - < > & ' " 를 문자 그대로 출력 (기본값)
+		false - 태그 내용으로 출력
+
+
+  - set		JSP변수 설정
+
+   <c:set var="변수명" value="값 scope="영역" />
+
+   <c:set var="변수명" scope="영역"> 값 </c:set>
+
+	기본 scope는 page
+
+
+   ** 자바 빈 객체를 c:set 하기도 한다
+	<c:set target="<% 객체변수 %>
+		property="멤버필드"
+		value="값" />
+
+
+   ** 맵 컬렉션을 c:set 하기
+	<c:set target="<% 맵 변수 %>"
+		property="키"
+		value="값" />

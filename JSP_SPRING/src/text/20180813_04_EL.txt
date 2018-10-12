@@ -1,0 +1,44 @@
+ + EL, 표현언어, Expression Language
+  - 값을 표현하는 언어
+  - JSP2.0에서 추가
+
+  - 표현식(<%= %>)과 비슷한 역할
+  - 표현식보다 간단하고 직관적
+
+
+
+ + 문법
+	${표현언어}
+
+
+
+ + EL 연산자
+  - 산술 : + - * /(div) %(mod)
+  - 관계 : ==(eq) !=(ne) <(lt) >(gt) <=(le) >=(ge)
+  - 조건 : 조건 ?a :b
+  - 논리 : &&(and) ||(or) !(not)
+  - null 검사 : empty 대상
+
+
+
+ + EL 기본객체
+  - 11개의 기본객체가 존재함
+
+
+  - pageContext : JSP page 기본객체와 동일
+
+  - pageScope : page객체에 저장된 Attribute 객체
+  - requestScope : 요청 한번 동안 유지되는 Attribute 객체
+  - sessionScope : 클라이언트마다 생성된는 Attribute 객체
+  - applicationScope : 어플리케이션 전체에서 사용되는 Attribute 객체
+
+  - param : request.getParameter(이름) 기능
+  - paramValues : request.getParameterValues() 기능
+
+  - header : request.getHeader(이름) 기능
+  - headerValues : request.getHeaders() 기능
+
+  - cookie : request.getCookies() 가 반환하는 Cookie[] 을 Map으로
+	사용할 수 있게 하는 객체
+
+  - initParam : application.getInitParameter(이름) 기능

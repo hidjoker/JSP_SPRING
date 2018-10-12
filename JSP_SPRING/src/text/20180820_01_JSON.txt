@@ -1,0 +1,35 @@
+ + JSON, JavaScript Object Notation
+
+  - 자바스크립트 객체 표기법
+
+  - 통신에서 데이터를 전달하기 위한 데이터 표기법을로 사용됨
+
+  - 마샬링, marshalling
+  - 언마샬링, unmarshalling
+
+
+  - 객체 : 클래스, 구조체, Hash Table, Map, ...
+
+	name/value 형태의 쌍을 가지는 컬렉션.
+
+	{ }
+	{ key:val, key:val, ... }
+
+
+  - 배열 : Array, List, Vector, Sequence, ...
+
+	순서화된 리스트.
+
+	[ ]
+	[ val, val, ... ]
+
+
+  - 문자열
+	"data"
+
+
+  - 숫자
+	data
+
+
+  - "true", "false", "null"

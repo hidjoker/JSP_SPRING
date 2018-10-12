@@ -1,0 +1,14 @@
+	File - New - Other
+
+	Spring 카테고리
+
+	Spring Legacy Project 선택
+
+	Spring MVC Project 선택
+
+	이름: SpringTest 입력
+
+	top-level Package를
+	  com.spring.www 입력
+
+	Finish

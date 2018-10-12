@@ -1,0 +1,11 @@
+ + 스프링 mybatis 설정
+
+  0. Maven으로 필요 라이브러리 설치
+
+  1. root-context.xml에 mybatis 설정 및 bean등록
+
+  2. src/main/resources/ 폴더에 mybatis-config.xml 추가
+
+  3. src/main/resources/ 폴더에 mapper xml 추가
+   ( 반드시 resources에 둘 필요는 없다 )
+   ( dao 패키지에 넣어서 프로젝트 진행 )

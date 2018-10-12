@@ -1,0 +1,38 @@
+
+ + 마이바티스, MyBatis
+
+  - http://blog.mybatis.org/
+	마이바티스 홈페이지
+	릴리즈노트 확인 가능
+
+  - http://www.mybatis.org/mybatis-3/ko/index.html
+	마이바티스 3 유저가이드 (한글)
+
+	구글에서 "마이바티스" 검색해서 접속 가능
+
+  - DB와 자바객체를 매핑해주는 퍼시스턴스 계층 자동화 프레임워크
+  - JDBC를 편하게 사용할 수 있게 해주는 도구
+   ( Connection,Statement -> 쿼리 전송 -> 결과 -> close() )
+   ( 위의 JDBC동작을 캡슐화하여 제공한다 )
+
+
+  - 장점
+	SQL코드와 프로그램 코드를 분리해서 관리할 수 있게 해준다
+
+	JDBC를 사용하기 쉽게 해준다
+
+
+  - iBatis를 발전시킨 버전이 MyBatis
+
+  - iBatis : JDK 1.4 이전
+  - MyBatis : JDK 1.5 이후
+
+  - MyBatis 3.2 이상의 요구사항은 JDK 1.6이상
+
+
+
+ + 라이브러리 다운받기
+  - 마이바티스 유저가이드 사이트 접속
+  - 시작하기 메뉴에서 mybatis-x.x.x.jar 링크 클릭
+  - .zip 파일 다운
+  - 압축 파일 내 확인

@@ -1,0 +1,71 @@
+
+ + Controller 메소드의 리턴타입
+  - Controller의 리턴문은 ViewName과 View에 전달되는 MODEL과 연관
+
+  - ViewName은 ViewResolver에 설정(servlet-context.xml)되어있는
+   prefix와 suffix를 제외한 이름을 설정한다
+  - JSP파일의 확장자를 제외하고 폴더구조를 포함하여 작성
+
+	prefix : "/WEB-INF/views/"
+	suffix : ".jsp"
+
+	ex) viewName을 "board/list"로 설정하면
+	  /WEB-INF/views/board/list.jsp 파일이 View로 지정됨
+
+  - 사용되는 대표적인 리턴타입 3가지
+
+	1. void
+	2. String
+	3. ModelAndView
+
+
+ 1. void
+  - @RequestMapping의 value로 설정된 url-pattern을 판단해서
+   ViewName을 지정한다
+
+  - url-pattern의 폴더구조를 포함
+
+  - 확장자를 가지는 형태라면 확장자를 제거한다
+
+  ex)
+	@RequestMapping(value="/member/login.do")
+	public void login() { }
+
+	-> ViewName : "member/login"
+	-> View : /WEB-INF/views/member/login.jsp
+
+
+
+ 2. String
+  - return코드에서 반환한 문자열 데이터를 ViewName으로 지정
+
+  ex)
+	@RequestMapping(value="/member/login.do")
+	public String login() {
+	  return "strMember/strLogin";
+	}
+
+	-> ViewName : "strMember/strLogin"
+	-> View : /WEB-INF/views/strMember/strLogin.jsp
+
+
+
+ 3. ModelAndView
+  - Model설정과 ViewName설정을 하나의 객체로 지정하는 방법
+
+  ex)
+	@RequestMapping(value="/member/login.do")
+	public ModelAndView login() {
+	  ModelAndView mav = new ModelAndView();
+
+	  mav.addObject("key", "value"); //모델 설정
+	  mav.setViewName("mavMember/mavLogin");
+
+	  return mav;
+	}
+
+	-> ViewName : "mavMember/mavLogin"
+	-> View : /WEB-INF/views/mavMember/mavLogin.jsp
+
+	-> key=value 데이터를 request scope attribute로 추가함
+	  (ModelAttribute)

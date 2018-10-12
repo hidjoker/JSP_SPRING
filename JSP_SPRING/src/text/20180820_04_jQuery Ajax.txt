@@ -1,0 +1,18 @@
+ + jQuery를 이용한 Ajax
+
+  - XHR을 이용한 순수 자바스크립트 Ajax는 크로스브라우징이 안됨
+
+  ** 크로스브라우징 : 하나의 코드로 다양한 브라우저에서 동작
+
+
+
+ + jQuery Ajax API
+
+  - $객체.load(url [,data] [,complete]);
+
+  - $.get(url [,data] [,success] [,dataType]);
+
+  - $.post(url [,data] [,success] [,dataType]);
+
+  - $.ajax(url [, settings]);
+  - $.ajax([settings]);

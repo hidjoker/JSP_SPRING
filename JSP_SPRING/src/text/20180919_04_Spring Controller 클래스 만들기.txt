@@ -1,0 +1,28 @@
+ + Spring Controller 클래스 만들기
+
+  1. 일반 클래스 생성
+
+  2. 클래스 정의 앞에 @Controller 어노테이션 붙이기
+	servlet-context.xml 설정 기반으로 동작
+	(base-package, annotation-driven 설정)
+
+  3. 일반 메소드 작성하기
+
+  4. 메소드 정의 앞에 @RequestMapping 붙이기
+	@RequestMapping(value="url패턴", method=메소드형식)
+	(method는 RequestMethod 열거체를 사용한다)
+	(method=RequestMethod.POST)
+	(method=RequsetMethod.GET)
+
+  5. 메소드의 매개변수 정의하기
+	요청 파라미터와 관련
+
+	요청처리에 필요한 각종 기능 및 설정 추가할 수 있음
+
+  6. 메소드의 리턴타입, 리턴코드 정의하기
+	VIEW와 관련됨
+
+	일반적으로 viewName을 설정함
+
+	MODEL 설정(VIEW에 전달되는 데이터)
+	( request.setAttribute() 와 관련됨 )

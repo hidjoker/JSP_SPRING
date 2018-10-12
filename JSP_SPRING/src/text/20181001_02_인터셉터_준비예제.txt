@@ -1,0 +1,18 @@
+ + 컨트롤러 메소드
+	/interceptor/login [GET]
+	/interceptor/login [POST]
+
+ + JSP
+	/views/interceptor/login.jsp
+
+	<form>
+		action="/interceptor/login"
+		method="post"
+
+	로그인버튼 : ID, PW를 전송한다
+
+ + DTO
+	User.java
+
+	private String id;
+	private String pw;

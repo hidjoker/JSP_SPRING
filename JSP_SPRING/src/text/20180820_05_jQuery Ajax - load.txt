@@ -1,0 +1,24 @@
+ + $객체.load(url [,data] [,complete]);
+
+  - url
+	Ajax 통신 요청 url
+	쿼리스트링을 붙여서 사용하면 GET method 통신
+
+  - data
+	요청 파라미터
+	JSON Object 또는 String 타입으로 입력
+	JSON Object로 입력시 POST 통신
+	String으로 입력 시 GET 통신
+
+  - complete
+	요청 완료 후 응답 callback function
+
+	function(
+		String responseText, //응답 텍스트
+		String textStatus, //응답 상태코드 메시지
+		jqXHR jqXHR) // XHR을 jquery객체로 변환한 것
+
+
+  ** 응답 텍스트를 .load 함수가 시작된 객체에 반영한다
+  ** 추가적인 기능을 complete 매개변수로 지정된 콜백함수를 통해
+   수행할 수 있다

@@ -1,0 +1,18 @@
+
+	http://tomcat.apache.org/ 접속
+
+	왼쪽 Apache Tomcat - Taglibs
+
+	Donload 링크 클릭
+
+	Apache Standard Taglib 링크 클릭
+
+	Standard 1.1 다운로드 클릭
+
+	binaries 클릭
+
+	jakarta-taglibs-standard-1.1.2.zip  다운로드
+
+	압축 해제
+
+	lib 폴더의 jstl.jar, standard.jar 이용

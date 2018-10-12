@@ -1,0 +1,61 @@
+ + JSP 액션(액션 태그)
+  - JSP 페이지를 이루는 요소 중 하나
+
+  - 페이지와 페이지 사이의 제어, 이동 등등
+
+  - JSP 페이지의 특정 동작을 명령하는 태그
+
+
+
+ + <jsp:useBean class="클래스명" id="bean변수명"></jsp:useBean>
+	Java Bean 생성하기
+
+	 JSP 페이지에서 사용할 자바빈 객체를 생성하고
+	지정한 scope 영역에 저장한다
+
+	장점 : 각 scope 영역에서 공유할 데이터를 쉽게 저장한다
+
+
+ + <jsp:setProperty name="bean이름" property="필드명" />
+	프로퍼티 설정하기
+
+
+ + <jsp:getProperty name="bean이름" property="필드명" />
+	프로퍼티 값 가져오기
+
+
+ + <jsp:foward page="이동할페이지"></jsp:foward>
+	페이지 이동(포워딩, fowarding)
+
+	전달 파라미터를 추가하고 싶으면
+	<jsp:param value="값" name="이름" /> 을
+	자식태그로 추가한다
+
+
+ + <jsp:include page="삽입할페이지" />
+
+ + <jsp:include page="삽입할페이지">
+	<jsp:param value="값" name="이름" />
+   </jsp:include>
+
+	JSP페이지 내에 다른 페이지를 추가한다
+
+	 파라미터를 전달하며 include하면 파라미터에 대한
+	처리를 하고난 뒤 결과 페이지가 include된다
+
+
+  ** include액션과 include지시자는 비슷한 동작을 한다
+	<jsp:include page"" />
+
+	<%@ include page="" %>
+
+	화면의 중복되는 부분을 손쉽게 관리할 수 있다
+	( 상단, 사이드, 메뉴, 하단 등등 )
+
+
+  ** include액션과 include지시자의 차이점
+
+	include 지시자는 JSP가 합쳐진 이후 컴파일된다
+
+	 include 액션은 각각의 JSP가 컴파일되고 코드가
+	처리된 후에 합쳐진다

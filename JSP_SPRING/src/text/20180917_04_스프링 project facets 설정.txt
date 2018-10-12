@@ -1,0 +1,17 @@
+
+ + 스프링 프로젝트에 적용된 버전 바꾸기
+
+  - Project Facets 설정
+
+	1. 프로젝트 폴더 우클릭
+
+	2. Build Path메뉴 - Configure build path 실행
+
+	3. 왼쪽 메뉴중에서 Project Facets 선택
+
+	4. Java 버전을 1.8로 선택
+
+	5. Apply
+
+	6. 확인은 Build Path 메뉴에서한다
+	( JRE 버전이 바뀌어 있음 )

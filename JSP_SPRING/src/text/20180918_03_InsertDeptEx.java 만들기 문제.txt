@@ -1,0 +1,13 @@
+
+ + InsertDeptEx.java 만들기
+
+	main 메소드 작성
+
+	Scanner로 부서번호, 부서이름, 부서위치 입력
+
+	마이바티스 이용해서 insert
+
+	parameterType="dto.Dept" 로 설정
+
+	 mapper에서 #{deptno}, #{dname}, #{loc} 해주면
+	자동으로 입력됨

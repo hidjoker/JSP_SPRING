@@ -1,0 +1,20 @@
+ + 새 프로젝트 생성 - MyBatis_Emp
+
+ + controller.EmpEx.java
+	dao.selectAll(); - 출력
+	dao.insertEmp(emp);
+	dao.selectByEmpNo(emp); - 출력
+	dao.deleteByEmpNo(emp);
+	dao.selectAll(); - 출력
+
+ + mybatis.mybatis-config.xml
+ + mybatis.MyBatisConnectionFactory.java
+
+ + dao.EmpDao.java
+ + dao.EmpMapper.xml
+	List selectAll()
+	Emp selectByEmpNo(Emp selectEmp)
+	void insertEmp(Emp insertEmp)
+	void deleteByEmpNo(Emp deleteEmp)
+
+ + dto.Emp.java
